@@ -57,7 +57,6 @@ router.put("/:id", (req, res) => {
         return;
       }
       res.json(dbData);
-      // QUESTION how to display updated json? chain a GET?
     })
     .catch((err) => {
       console.log(err);
@@ -77,7 +76,7 @@ router.delete("/:id", (req, res) => {
         res.status(404).json({ message: "No category was found with this id" });
         return;
       }
-      res.json(dbData);
+      res.status(200).json({ message: "Category deleted" });
     })
     .catch((err) => {
       console.log(err);
