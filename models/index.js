@@ -27,6 +27,7 @@ Tag.belongsToMany(Product, {
   through: ProductTag,
   as: "product_tags",
   foreignKey: "tag_id",
+  onDelete: "cascade",
 });
 
 module.exports = {
