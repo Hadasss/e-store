@@ -96,6 +96,7 @@ router.post("/", (req, res) => {
 // update product
 router.put("/:id", (req, res) => {
   // update product data
+  console.log(req.body);
   Product.update(req.body, {
     where: {
       id: req.params.id,
@@ -115,8 +116,8 @@ router.put("/:id", (req, res) => {
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
 
       // create filtered list of new tag_ids
-      const newProductTags = req.body.tagIds // QUESTION - does req.body refer to the first response or this latest one?
-        .filter((tag_id) => !productTagIds.includes(tag_id)) // QUESTION explain filter
+      const newProductTags = req.body.tagIds // QUESTION
+        .filter((tag_id) => !productTagIds.includes(tag_id))
         .map((tag_id) => {
           // create tag objects for the tags that are needed for the updated product
           return {
@@ -125,8 +126,8 @@ router.put("/:id", (req, res) => {
           };
         });
       // figure out which ones to remove
-      const productTagsToRemove = productTags
-        .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
+      const productTagsToRemove = productTags // QUESTION
+        .filter(({ tag_id }) => req.body.tagIds.includes(tag_id))
         .map(({ id }) => id);
 
       // run both actions
@@ -154,7 +155,6 @@ router.delete("/:id", (req, res) => {
         res.status(404).json({ message: "No product was found with this id" });
         return;
       }
-      // TODO generate new product list
       res.status(200).json({ message: "Product deleted" });
     })
     .catch((err) => {
