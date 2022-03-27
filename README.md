@@ -44,6 +44,9 @@ Express.js
 Insomnia
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/80355222/160270500-13ae813a-0723-4b30-ba4f-e12d85f77acd.png)
+![image](https://user-images.githubusercontent.com/80355222/160270517-32fb725a-3eae-4438-ae08-f79b9dcf604e.png)
+
 
 ## Link to Walkthrough Video
 https://watch.screencastify.com/v/StfVaDlAypC5AyVmZGbx
