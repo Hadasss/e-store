@@ -46,5 +46,8 @@ Insomnia
 ## Screenshots
 
 ## Link to Walkthrough Video
+https://watch.screencastify.com/v/StfVaDlAypC5AyVmZGbx
+https://drive.google.com/file/d/12ZwMHf2rdFTHgjSDLAON6w1UDRJC4uPO/view
+
 
    
